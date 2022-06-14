@@ -22,6 +22,7 @@ contents:
     - php81-mysqli
     - php81-fpm
     - php81-ctype
+    - php81-tokenizer
 # APCu || OPCache : OPCache by default
 #    - php81-pecl-apcu
     - php81-opcache

@@ -20,6 +20,7 @@ contents:
     - php8-exif
     - php8-mysqli
     - php8-ctype
+    - php8-tokenizer
 # APCu || OPCache : OPCache by default
 #    - php8-pecl-apcu
     - php8-opcache
