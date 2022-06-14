@@ -29,7 +29,7 @@ entrypoint:
   type: service-bundle
   services:
     nginx: /usr/sbin/nginx -c /etc/nginx/nginx.conf -g "daemon off;"
-    #php-fpm: /usr/sbin/php-fpm8
+    php-fpm: /usr/sbin/php-fpm8 -F -R
 
 accounts:
   groups:
