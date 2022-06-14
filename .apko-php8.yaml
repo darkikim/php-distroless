@@ -19,6 +19,7 @@ contents:
     - php8-bz2
     - php8-exif
     - php8-mysqli
+    - php8-ctype
 # APCu || OPCache : OPCache by default
 #    - php8-pecl-apcu
     - php8-opcache

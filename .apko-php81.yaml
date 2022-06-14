@@ -19,6 +19,7 @@ contents:
     - php81-bz2
     - php81-exif
     - php81-mysqli
+    - php81-ctype
 # APCu || OPCache : OPCache by default
 #    - php81-pecl-apcu
     - php81-opcache
