@@ -8,7 +8,7 @@ contents:
     - php8
     - php8-intl
     - php8-xsl
-    - php8-amqp
+    - php8-pecl-amqp
     - php8-gd
     - php8-openssl
     - php8-sodium
@@ -20,7 +20,7 @@ contents:
     - php8-exif
     - php8-mysqli
 # APCu || OPCache : OPCache by default
-#    - php8-apcu
+#    - php8-pecl-apcu
     - php8-opcache
 
 entrypoint:

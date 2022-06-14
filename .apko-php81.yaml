@@ -8,7 +8,7 @@ contents:
     - php81
     - php81-intl
     - php81-xsl
-    - php81-amqp
+    - php81-pecl-amqp
     - php81-gd
     - php81-openssl
     - php81-sodium
@@ -20,7 +20,7 @@ contents:
     - php81-exif
     - php81-mysqli
 # APCu || OPCache : OPCache by default
-#    - php81-apcu
+#    - php81-pecl-apcu
     - php81-opcache
 
 entrypoint:
