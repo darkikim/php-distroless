@@ -26,7 +26,7 @@ contents:
 entrypoint:
   type: service-bundle
   services:
-    php: /usr/local/sbin/php81
+    php: /usr/bin/php81
 
 accounts:
   groups:
