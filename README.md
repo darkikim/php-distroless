@@ -7,3 +7,6 @@ As soon as a new PHP version is given is alpine package it will be given in this
 
 For an Official PHP list of PHP supported version please go to this link :  
 https://www.php.net/supported-versions.php
+
+
+To use the image build here please watch this url : https://ghcr.io/darkikim/php-distroless
