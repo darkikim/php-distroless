@@ -1,34 +1,9 @@
-# Template Respository for Distroless Images
+# Respository for PHP Distroless Images
 
-This repository contains some basic files to spin up a new distroless image.
+This repository contains distroless images for PHP 8+.
 
-## Image Configuration
+Image will follow alpine package for php so there will be no PHP 7.4 version of this distroless php.
+As soon as a new PHP version is given is alpine package it will be given in this repository.
 
-To add a new image distribution to the distroless org, create its repository
-by clicking on the
-"[Use this template button](https://github.com/distroless/template/generate)".
-This will create a new repository using the files contained here.
-
-Modify the sample `.apko.yaml` file to define the configuration of the new image:
-
-```yaml
-contents:
-  repositories:
-    - http://dl-cdn.alpinelinux.org/alpine/edge/main
-  packages:
-    - ca-certificates-bundle
-    - alpine-baselayout-data
-```
-
-For more information about all the apko configuration options, please check
-the documentation and the [examples](https://github.com/chainguard-dev/apko/tree/main/examples).
-
-## Image Readme
-
-Remember to describe the purpose of the new image by editing the README.md file.
-
-## Release Workflow
-
-By default, the new repository will contain a
-[release workflow](.github/workflow/release.yaml) that builds and publishes the
-image every day at midnight.
+For an Official PHP list of PHP supported version please go to this link :  
+https://www.php.net/supported-versions.php

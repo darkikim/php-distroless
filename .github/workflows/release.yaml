@@ -30,19 +30,37 @@ jobs:
     - uses: actions/checkout@v3
     - uses: distroless/actions/apko-snapshot@main
       with:
-        config: .apko.yaml
+        config: .apko-php8-fpm.yaml
         base-tag: ghcr.io/${{ github.repository }}
+        target-tag: 8.0-fpm
 
-    # Post to slack when things fail.
+    - uses: distroless/actions/apko-snapshot@main
+      with:
+        config: .apko-php8.yaml
+        base-tag: ghcr.io/${{ github.repository }}
+        target-tag: 8.0
+
+    - uses: distroless/actions/apko-snapshot@main
+      with:
+        config: .apko-php81-fpm.yaml
+        base-tag: ghcr.io/${{ github.repository }}
+        target-tag: 8.1-fpm
+
+    - uses: distroless/actions/apko-snapshot@main
+      with:
+        config: .apko-php81.yaml
+        base-tag: ghcr.io/${{ github.repository }}
+        target-tag: 8.1
+
+    # Post to discord when things fail.
     - if: ${{ failure() }}
-      uses: rtCamp/action-slack-notify@v2.2.0
-      env:
-        SLACK_ICON: http://github.com/chainguardian.png?size=48
-        SLACK_USERNAME: chainguardian
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        SLACK_CHANNEL: distroless
-        SLACK_COLOR: '#8E1600'
-        MSG_MINIMAL: 'true'
-        SLACK_TITLE: Releasing ${{ github.repository }} failed.
-        SLACK_MESSAGE: |
+      uses: appleboy/discord-action@master
+      with:
+        webhook_id: ${{ secrets.WEBHOOK_ID }}
+        webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+        username: chainguardian
+        avatar_url: http://github.com/chainguardian.png?size=48
+        color: '#8E1600'
+        message: |
+          Releasing ${{ github.repository }} failed.
           For detailed logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}

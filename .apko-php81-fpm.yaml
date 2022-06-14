@@ -1,0 +1,61 @@
+contents:
+  repositories:
+    - https://dl-cdn.alpinelinux.org/alpine/edge/main
+    - https://dl-cdn.alpinelinux.org/alpine/edge/community
+  packages:
+    - ca-certificates-bundle
+    - alpine-baselayout-data
+    - nginx
+    - php81
+    - php81-intl
+    - php81-xsl
+    - php81-amqp
+    - php81-gd
+    - php81-openssl
+    - php81-sodium
+    - php81-curl
+    - php81-zip
+    - php81-pdo_mysql
+    - php81-bcmath
+    - php81-bz2
+    - php81-exif
+    - php81-mysqli
+    - php81-fpm
+# APCu || OPCache : OPCache by default
+#    - php81-apcu
+    - php81-opcache
+
+entrypoint:
+  type: service-bundle
+  services:
+    nginx: /usr/sbin/nginx -c /etc/nginx/nginx.conf -g "daemon off;"
+    php-fpm: /usr/local/sbin/php81-fpm
+
+accounts:
+  groups:
+    - groupname: www-data
+      gid: 1000
+  users:
+    - username: www-data
+      uid: 1000
+  run-as: www-data
+
+environment:
+  PATH: /usr/sbin:/sbin:/usr/bin:/bin
+
+paths:
+  - path: /run/nginx
+    type: directory
+    uid: 1000
+    gid: 1000
+    permissions: 0o755
+  - path: /etc/nginx/http.d/default.conf
+    type: hardlink
+    source: /usr/share/nginx/http-default_server.conf
+    uid: 1000
+    gid: 1000
+    permissions: 0o644
+
+archs:
+  - arm64
+  - amd64
