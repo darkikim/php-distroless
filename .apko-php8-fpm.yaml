@@ -23,6 +23,7 @@ contents:
     - php8-fpm
     - php8-ctype
     - php8-tokenizer
+    - php8-session
 # APCu || OPCache : OPCache by default
 #    - php8-pecl-apcu
     - php8-opcache

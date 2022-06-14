@@ -23,6 +23,7 @@ contents:
     - php81-fpm
     - php81-ctype
     - php81-tokenizer
+    - php81-session
 # APCu || OPCache : OPCache by default
 #    - php81-pecl-apcu
     - php81-opcache
