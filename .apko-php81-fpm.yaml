@@ -38,7 +38,6 @@ accounts:
   users:
     - username: www-data
       uid: 1000
-  run-as: www-data
 
 environment:
   PATH: /usr/sbin:/sbin:/usr/bin:/bin
