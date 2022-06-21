@@ -48,19 +48,19 @@ jobs:
 
     - uses: distroless/actions/apko-snapshot@main
       with:
-        config: ./php8/.apko-php81-dev.yaml
+        config: ./php8.1/.apko-php81-dev.yaml
         base-tag: ghcr.io/${{ github.repository }}
         target-tag: 8.1-dev
 
     - uses: distroless/actions/apko-snapshot@main
       with:
-        config: ./php8/.apko-php81-fpm.yaml
+        config: ./php8.1/.apko-php81-fpm.yaml
         base-tag: ghcr.io/${{ github.repository }}
         target-tag: 8.1-fpm
 
     - uses: distroless/actions/apko-snapshot@main
       with:
-        config: ./php8/.apko-php81.yaml
+        config: ./php8.1/.apko-php81.yaml
         base-tag: ghcr.io/${{ github.repository }}
         target-tag: 8.1
 
