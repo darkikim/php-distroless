@@ -26,22 +26,32 @@ jobs:
 
     - uses: distroless/actions/apko-build@main
       with:
-        config: .apko-php8-fpm.yaml
+        config:  ./php8/.apko-php8-dev.yaml
+        tag: template:php8-dev-${{ steps.snapshot-date.outputs.date }}
+
+    - uses: distroless/actions/apko-build@main
+      with:
+        config:  ./php8/.apko-php8-fpm.yaml
         tag: template:php8-fpm-${{ steps.snapshot-date.outputs.date }}
 
     - uses: distroless/actions/apko-build@main
       with:
-        config: .apko-php8.yaml
+        config:  ./php8/.apko-php8.yaml
         tag: template:php8-${{ steps.snapshot-date.outputs.date }}
 
     - uses: distroless/actions/apko-build@main
       with:
-        config: .apko-php81-fpm.yaml
+        config:  ./php8.1/.apko-php81-dev.yaml
+        tag: template:php81-dev-${{ steps.snapshot-date.outputs.date }}
+
+    - uses: distroless/actions/apko-build@main
+      with:
+        config:  ./php8.1/.apko-php81-fpm.yaml
         tag: template:php81-fpm-${{ steps.snapshot-date.outputs.date }}
 
     - uses: distroless/actions/apko-build@main
       with:
-        config: .apko-php81.yaml
+        config:  ./php8.1/.apko-php81.yaml
         tag: template:php81-${{ steps.snapshot-date.outputs.date }}
 
     - uses: actions/upload-artifact@v3

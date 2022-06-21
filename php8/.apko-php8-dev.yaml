@@ -1,0 +1,71 @@
+contents:
+  repositories:
+    - https://dl-cdn.alpinelinux.org/alpine/edge/main
+    - https://dl-cdn.alpinelinux.org/alpine/edge/community
+  packages:
+    - ca-certificates-bundle
+    - alpine-baselayout-data
+    - busybox
+    - ssl_client
+    - nginx
+    - php8
+    - php8-intl
+    - php8-xsl
+    - php8-pecl-amqp
+    - php8-gd
+    - php8-openssl
+    - php8-sodium
+    - php8-curl
+    - php8-zip
+    - php8-pdo_mysql
+    - php8-bcmath
+    - php8-bz2
+    - php8-exif
+    - php8-mysqli
+    - php8-fpm
+    - php8-ctype
+    - php8-tokenizer
+    - php8-session
+# APCu || OPCache : OPCache by default
+#    - php8-pecl-apcu
+    - php8-opcache
+    - php8-pecl-xdebug
+
+entrypoint:
+  type: service-bundle
+  services:
+    nginx: /usr/sbin/nginx -c /etc/nginx/nginx.conf -g "daemon off;"
+    php-fpm: /usr/sbin/php-fpm8 -F -R
+
+accounts:
+  groups:
+    - groupname: www-data
+      gid: 1000
+  users:
+    - username: www-data
+      uid: 1000
+
+environment:
+  PATH: /usr/sbin:/sbin:/usr/bin:/bin
+
+paths:
+  - path: /run/nginx
+    type: directory
+    uid: 1000
+    gid: 1000
+    permissions: 0o755
+  - path: /run/nginx
+    type: directory
+    uid: 1000
+    gid: 1000
+    permissions: 0o755
+  - path: /etc/nginx/http.d/default.conf
+    type: hardlink
+    source: /usr/share/nginx/http-default_server.conf
+    uid: 1000
+    gid: 1000
+    permissions: 0o644
+
+archs:
+  - arm64
+  - amd64
