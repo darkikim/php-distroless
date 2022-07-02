@@ -31,6 +31,7 @@ contents:
 #    - php8-pecl-apcu
     - php8-opcache
     - php8-pecl-xdebug
+    - php8-fileinfo
 
 entrypoint:
   type: service-bundle

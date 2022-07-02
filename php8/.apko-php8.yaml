@@ -26,6 +26,7 @@ contents:
 # APCu || OPCache : OPCache by default
 #    - php8-pecl-apcu
     - php8-opcache
+    - php8-fileinfo
 
 entrypoint:
   type: service-bundle
