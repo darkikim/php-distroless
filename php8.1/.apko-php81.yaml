@@ -45,6 +45,14 @@ accounts:
 environment:
   PATH: /usr/sbin:/sbin:/usr/bin:/bin
 
+paths:
+  - path: /usr/bin/php
+    type: hardlink
+    source: /usr/bin/php81
+    uid: 1000
+    gid: 1000
+    permissions: 0o644
+
 archs:
   - arm64
   - amd64
