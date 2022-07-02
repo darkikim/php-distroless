@@ -8,6 +8,7 @@ contents:
     - nginx
     - php81
     - php81-intl
+    - php81-xml
     - php81-xsl
     - php81-pecl-amqp
     - php81-gd

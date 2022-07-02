@@ -10,6 +10,7 @@ contents:
     - nginx
     - php8
     - php8-intl
+    - php8-xml
     - php8-xsl
     - php8-pecl-amqp
     - php8-gd

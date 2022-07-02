@@ -7,6 +7,7 @@ contents:
     - alpine-baselayout-data
     - php81
     - php81-intl
+    - php81-xml
     - php81-xsl
     - php81-pecl-amqp
     - php81-gd
