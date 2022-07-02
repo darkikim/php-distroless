@@ -46,9 +46,9 @@ environment:
   PATH: /usr/sbin:/sbin:/usr/bin:/bin
 
 paths:
-  - path: /usr/bin/php
+  - path: /usr/bin/php81
     type: symlink
-    source: /usr/bin/php81
+    source: /usr/bin/php
     permissions: 0o644
 
 archs:
