@@ -60,11 +60,11 @@ paths:
     uid: 1000
     gid: 1000
     permissions: 0o644
-  - path: /usr/bin/php
-    type: symlink
+  - path: /usr/sbin/php
+    type: hardlink
     source: /usr/bin/php81
-    permissions: 0o644
+    permissions: 0o755
 
 archs:
-  #- arm64
+  - arm64
   - amd64

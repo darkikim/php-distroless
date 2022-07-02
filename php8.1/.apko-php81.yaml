@@ -46,11 +46,11 @@ environment:
   PATH: /usr/sbin:/sbin:/usr/bin:/bin
 
 paths:
-  - path: /usr/bin/php
-    type: symlink
+  - path: /usr/sbin/php
+    type: hardlink
     source: /usr/bin/php81
-    permissions: 0o644
+    permissions: 0o755
 
 archs:
-  #- arm64
+  - arm64
   - amd64
