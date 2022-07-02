@@ -47,10 +47,8 @@ environment:
 
 paths:
   - path: /usr/bin/php
-    type: hardlink
+    type: symlink
     source: /usr/bin/php81
-    uid: 1000
-    gid: 1000
     permissions: 0o644
 
 archs:
