@@ -32,6 +32,7 @@ contents:
     - php81-opcache
     - php81-pecl-xdebug
     - php81-fileinfo
+    - php81-simplexml
 
 entrypoint:
   type: service-bundle

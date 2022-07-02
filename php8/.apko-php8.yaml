@@ -27,6 +27,7 @@ contents:
 #    - php8-pecl-apcu
     - php8-opcache
     - php8-fileinfo
+    - php8-simplexml
 
 entrypoint:
   type: service-bundle

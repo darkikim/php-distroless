@@ -32,6 +32,7 @@ contents:
     - php8-opcache
     - php8-pecl-xdebug
     - php8-fileinfo
+    - php8-simplexml
 
 entrypoint:
   type: service-bundle
