@@ -50,6 +50,8 @@ environment:
   PATH: /usr/sbin:/sbin:/usr/bin:/bin
 
 paths:
+  - path: /usr/sbin/nginx
+    permissions: 0o755
   - path: /run/nginx
     type: directory
     uid: 1000
