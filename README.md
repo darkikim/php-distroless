@@ -28,3 +28,5 @@ services:
         - ./docker/config/default.conf:/etc/nginx/conf.d/default.conf
         - ./docker/config/nginx.conf:/etc/nginx/nginx.conf
 ```
+nginx: [alert] could not open error log file: open() "/var/lib/nginx/logs/error.log" failed (13: Permission denied)
+2022/09/25 14:38:56 [emerg] 367#367: mkdir() "/var/lib/nginx/tmp/client_body" failed (13: Permission denied)
