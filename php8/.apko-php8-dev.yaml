@@ -84,17 +84,17 @@ paths:
     uid: 1000
     gid: 1000
     permissions: 0o755
-  - path: /run/nginx
-    type: directory
-    uid: 1000
-    gid: 1000
-    permissions: 0o755
   - path: /etc/nginx/http.d/default.conf
     type: hardlink
     source: /usr/share/nginx/http-default_server.conf
     uid: 1000
     gid: 1000
     permissions: 0o644
+  - path: /var/log/php8
+    type: directory
+    uid: 1000
+    gid: 1000
+    permissions: 0o755
 
 archs:
   - arm64

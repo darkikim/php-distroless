@@ -94,6 +94,11 @@ paths:
     type: hardlink
     source: /usr/bin/php81
     permissions: 0o755
+  - path: /var/log/php8
+    type: directory
+    uid: 1000
+    gid: 1000
+    permissions: 0o755
 
 archs:
   - arm64

@@ -92,6 +92,11 @@ paths:
     uid: 1000
     gid: 1000
     permissions: 0o644
+  - path: /var/log/php8
+    type: directory
+    uid: 1000
+    gid: 1000
+    permissions: 0o755
 
 archs:
   - arm64
