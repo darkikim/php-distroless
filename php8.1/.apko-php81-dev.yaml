@@ -69,6 +69,16 @@ paths:
     uid: 1000
     gid: 1000
     permissions: 0o750
+  - path: /var/lib/nginx/tmp/
+    type: directory
+    uid: 1000
+    gid: 1000
+    permissions: 0o750
+  - path: /var/lib/nginx/tmp/client_body
+    type: directory
+    uid: 1000
+    gid: 1000
+    permissions: 0o750
   - path: /run/nginx
     type: directory
     uid: 1000
